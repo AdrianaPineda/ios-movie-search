@@ -45,6 +45,23 @@
         self.moviePoster.image = posterImage;
     }
 }
+- (IBAction)share:(id)sender {
+
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Share" message:@"How do you want to share?" preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction *twitterAction = [UIAlertAction actionWithTitle:@"Tweet" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+
+    }];
+
+    UIAlertAction *smsAction = [UIAlertAction actionWithTitle:@"SMS" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+
+    }];
+
+    [alertController addAction:twitterAction];
+    [alertController addAction:smsAction];
+
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 
 /*
 #pragma mark - Navigation

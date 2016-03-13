@@ -89,7 +89,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movie Detail" id="MKQ-UI-vKE">
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="859-Wa-9Lw"/>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="859-Wa-9Lw">
+                            <connections>
+                                <action selector="share:" destination="C1t-q4-QWq" id="zDH-3Y-ayW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="moviePoster" destination="0nT-81-yWF" id="Ejq-lk-v4N"/>
