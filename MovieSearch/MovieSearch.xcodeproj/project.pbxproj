@@ -15,6 +15,8 @@
 		010915341C95F17B00CC0821 /* MovieSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 010915331C95F17B00CC0821 /* MovieSearchTests.m */; };
 		010915411C95F6E100CC0821 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 010915401C95F6E100CC0821 /* Movie.m */; };
 		010915441C95F71E00CC0821 /* MoviesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010915431C95F71E00CC0821 /* MoviesTableViewController.m */; };
+		010915471C95F9FE00CC0821 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010915461C95F9FE00CC0821 /* AFNetworking.framework */; };
+		010915481C95F9FE00CC0821 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 010915461C95F9FE00CC0821 /* AFNetworking.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,20 @@
 			remoteInfo = MovieSearch;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		010915491C95F9FF00CC0821 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				010915481C95F9FE00CC0821 /* AFNetworking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		010915161C95F17B00CC0821 /* MovieSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +59,7 @@
 		010915401C95F6E100CC0821 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = Models/Movie.m; sourceTree = "<group>"; };
 		010915421C95F71E00CC0821 /* MoviesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesTableViewController.h; sourceTree = "<group>"; };
 		010915431C95F71E00CC0821 /* MoviesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesTableViewController.m; sourceTree = "<group>"; };
+		010915461C95F9FE00CC0821 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = MovieSearch/libs/AFNetworking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				010915471C95F9FE00CC0821 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +84,7 @@
 		0109150D1C95F17B00CC0821 = {
 			isa = PBXGroup;
 			children = (
+				010915461C95F9FE00CC0821 /* AFNetworking.framework */,
 				010915181C95F17B00CC0821 /* MovieSearch */,
 				010915321C95F17B00CC0821 /* MovieSearchTests */,
 				010915171C95F17B00CC0821 /* Products */,
@@ -84,6 +103,7 @@
 		010915181C95F17B00CC0821 /* MovieSearch */ = {
 			isa = PBXGroup;
 			children = (
+				010915451C95F9B400CC0821 /* libs */,
 				0109153E1C95F37A00CC0821 /* Models */,
 				0109151C1C95F17B00CC0821 /* AppDelegate.h */,
 				0109151D1C95F17B00CC0821 /* AppDelegate.m */,
@@ -124,6 +144,13 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		010915451C95F9B400CC0821 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +161,7 @@
 				010915121C95F17B00CC0821 /* Sources */,
 				010915131C95F17B00CC0821 /* Frameworks */,
 				010915141C95F17B00CC0821 /* Resources */,
+				010915491C95F9FF00CC0821 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -355,6 +383,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MovieSearch/libs",
+				);
 				INFOPLIST_FILE = MovieSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pineda.adriana.MovieSearch;
@@ -366,6 +398,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MovieSearch/libs",
+				);
 				INFOPLIST_FILE = MovieSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pineda.adriana.MovieSearch;
