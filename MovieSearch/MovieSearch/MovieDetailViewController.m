@@ -56,12 +56,14 @@
     }
 
 }
+
 - (IBAction)share:(id)sender {
 
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Share" message:@"How do you want to share?" preferredStyle:UIAlertControllerStyleAlert];
 
     UIAlertAction *twitterAction = [UIAlertAction actionWithTitle:@"Tweet" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 
+        [self shareWithTwitter];
     }];
 
     UIAlertAction *smsAction = [UIAlertAction actionWithTitle:@"SMS" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -74,6 +76,17 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
+- (void)shareWithTwitter {
+
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+
+        SLComposeViewController *twitterController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+
+        [twitterController setInitialText: [NSString stringWithFormat:@"Im watching %@", self.movie.title]];
+
+        [self presentViewController:twitterController animated:YES completion:nil];
+    }
+}
 /*
 #pragma mark - Navigation
 

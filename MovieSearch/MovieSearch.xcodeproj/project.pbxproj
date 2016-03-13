@@ -18,6 +18,7 @@
 		010915471C95F9FE00CC0821 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010915461C95F9FE00CC0821 /* AFNetworking.framework */; };
 		010915481C95F9FE00CC0821 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 010915461C95F9FE00CC0821 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0109154C1C96112500CC0821 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0109154B1C96112500CC0821 /* MovieDetailViewController.m */; };
+		0109154E1C96221300CC0821 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0109154D1C96221300CC0821 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		010915461C95F9FE00CC0821 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = MovieSearch/libs/AFNetworking.framework; sourceTree = "<group>"; };
 		0109154A1C96112500CC0821 /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
 		0109154B1C96112500CC0821 /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
+		0109154D1C96221300CC0821 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0109154E1C96221300CC0821 /* Social.framework in Frameworks */,
 				010915471C95F9FE00CC0821 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +90,7 @@
 		0109150D1C95F17B00CC0821 = {
 			isa = PBXGroup;
 			children = (
+				0109154D1C96221300CC0821 /* Social.framework */,
 				010915461C95F9FE00CC0821 /* AFNetworking.framework */,
 				010915181C95F17B00CC0821 /* MovieSearch */,
 				010915321C95F17B00CC0821 /* MovieSearchTests */,
@@ -112,13 +116,13 @@
 				0109151D1C95F17B00CC0821 /* AppDelegate.m */,
 				010915421C95F71E00CC0821 /* MoviesTableViewController.h */,
 				010915431C95F71E00CC0821 /* MoviesTableViewController.m */,
+				0109154A1C96112500CC0821 /* MovieDetailViewController.h */,
+				0109154B1C96112500CC0821 /* MovieDetailViewController.m */,
 				010915221C95F17B00CC0821 /* Main.storyboard */,
 				010915251C95F17B00CC0821 /* Assets.xcassets */,
 				010915271C95F17B00CC0821 /* LaunchScreen.storyboard */,
 				0109152A1C95F17B00CC0821 /* Info.plist */,
 				010915191C95F17B00CC0821 /* Supporting Files */,
-				0109154A1C96112500CC0821 /* MovieDetailViewController.h */,
-				0109154B1C96112500CC0821 /* MovieDetailViewController.m */,
 			);
 			path = MovieSearch;
 			sourceTree = "<group>";
