@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self configureMovieDetails];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,6 +28,22 @@
 
 - (void)setSelectedMovie:(Movie *)movie {
     self.movie = movie;
+}
+
+- (void)configureMovieDetails {
+
+    [self configureMoviePoster];
+}
+
+- (void)configureMoviePoster {
+    if (self.movie) {
+
+        NSString *posterUrlAsString = self.movie.posterUrl;
+        NSURL *posterUrl = [NSURL URLWithString:posterUrlAsString];
+        NSData *imageData = [NSData dataWithContentsOfURL:posterUrl];
+        UIImage *posterImage = [UIImage imageWithData:imageData];
+        self.moviePoster.image = posterImage;
+    }
 }
 
 /*

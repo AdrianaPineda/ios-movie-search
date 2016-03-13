@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Movie Search-->
@@ -38,7 +39,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="C1t-q4-QWq" kind="show" identifier="movieDetail" id="xC9-Px-rSx"/>
+                                    <segue destination="C1t-q4-QWq" kind="show" identifier="showMovie" id="xC9-Px-rSx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -54,7 +55,7 @@
             </objects>
             <point key="canvasLocation" x="888" y="1006"/>
         </scene>
-        <!--Movie Detail View Controller-->
+        <!--Movie Detail-->
         <scene sceneID="SR0-m4-Y4R">
             <objects>
                 <viewController id="C1t-q4-QWq" customClass="MovieDetailViewController" sceneMemberID="viewController">
@@ -66,12 +67,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0nT-81-yWF">
-                                <rect key="frame" x="20" y="100" width="560" height="387"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0nT-81-yWF">
+                                <rect key="frame" x="28" y="100" width="544" height="387"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OO1-nV-Dcn">
+                                <rect key="frame" x="28" y="513" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P4z-6X-yll" firstAttribute="top" secondItem="OO1-nV-Dcn" secondAttribute="bottom" constant="66" id="38K-cU-h65"/>
+                            <constraint firstItem="0nT-81-yWF" firstAttribute="top" secondItem="dgc-MJ-c1Q" secondAttribute="bottom" constant="36" id="9zf-L9-HhR"/>
+                            <constraint firstItem="OO1-nV-Dcn" firstAttribute="leading" secondItem="5Kf-Ha-gRr" secondAttribute="leadingMargin" constant="8" id="bCT-ha-Tc8"/>
+                            <constraint firstItem="0nT-81-yWF" firstAttribute="leading" secondItem="5Kf-Ha-gRr" secondAttribute="leadingMargin" constant="8" id="cKR-to-qoW"/>
+                            <constraint firstItem="OO1-nV-Dcn" firstAttribute="top" secondItem="0nT-81-yWF" secondAttribute="bottom" constant="26" id="dtf-cI-lx9"/>
+                            <constraint firstItem="OO1-nV-Dcn" firstAttribute="leading" secondItem="0nT-81-yWF" secondAttribute="leading" id="wEG-JW-Qd1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0nT-81-yWF" secondAttribute="trailing" constant="8" id="xJw-iE-cfU"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Movie Detail" id="MKQ-UI-vKE">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="859-Wa-9Lw"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="moviePoster" destination="0nT-81-yWF" id="Ejq-lk-v4N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5AD-V4-Qkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
