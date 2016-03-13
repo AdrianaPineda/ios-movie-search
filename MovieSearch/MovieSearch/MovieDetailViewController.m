@@ -7,9 +7,11 @@
 //
 
 #import "MovieDetailViewController.h"
+#import "Social/Social.h"
 
 @interface MovieDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *movieTitle;
 @property (nonatomic, strong) Movie *movie;
 @end
 
@@ -33,17 +35,26 @@
 - (void)configureMovieDetails {
 
     [self configureMoviePoster];
+    [self configureMovieTitle];
 }
 
 - (void)configureMoviePoster {
+
     if (self.movie) {
 
-        NSString *posterUrlAsString = self.movie.posterUrl;
-        NSURL *posterUrl = [NSURL URLWithString:posterUrlAsString];
-        NSData *imageData = [NSData dataWithContentsOfURL:posterUrl];
+        NSData *imageData = [self.movie getPosterImageData];
         UIImage *posterImage = [UIImage imageWithData:imageData];
         self.moviePoster.image = posterImage;
     }
+
+}
+
+- (void)configureMovieTitle {
+
+    if (self.movie) {
+        self.movieTitle.text = self.movie.title;
+    }
+
 }
 - (IBAction)share:(id)sender {
 

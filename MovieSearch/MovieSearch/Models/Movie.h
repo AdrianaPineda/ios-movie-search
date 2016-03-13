@@ -16,4 +16,5 @@
 @property (nonatomic) NSString *imdbID;
 
 - (instancetype) initWithDictionary:(NSDictionary *)dictionary;
+- (NSData *)getPosterImageData;
 @end

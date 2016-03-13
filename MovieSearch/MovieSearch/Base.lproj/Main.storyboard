@@ -67,11 +67,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0nT-81-yWF">
-                                <rect key="frame" x="28" y="100" width="544" height="387"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0nT-81-yWF">
+                                <rect key="frame" x="28" y="100" width="544" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="54p-ay-lS8"/>
+                                    <constraint firstAttribute="height" constant="262" id="Cwp-aF-jNV"/>
+                                    <constraint firstAttribute="height" constant="230" id="oZW-E8-x35"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="230" id="pec-5g-Jbl"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="54p-ay-lS8"/>
+                                        <exclude reference="Cwp-aF-jNV"/>
+                                        <exclude reference="pec-5g-Jbl"/>
+                                    </mask>
+                                </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OO1-nV-Dcn">
-                                <rect key="frame" x="28" y="513" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OO1-nV-Dcn">
+                                <rect key="frame" x="28" y="364" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -79,13 +92,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="P4z-6X-yll" firstAttribute="top" secondItem="OO1-nV-Dcn" secondAttribute="bottom" constant="66" id="38K-cU-h65"/>
-                            <constraint firstItem="0nT-81-yWF" firstAttribute="top" secondItem="dgc-MJ-c1Q" secondAttribute="bottom" constant="36" id="9zf-L9-HhR"/>
-                            <constraint firstItem="OO1-nV-Dcn" firstAttribute="leading" secondItem="5Kf-Ha-gRr" secondAttribute="leadingMargin" constant="8" id="bCT-ha-Tc8"/>
-                            <constraint firstItem="0nT-81-yWF" firstAttribute="leading" secondItem="5Kf-Ha-gRr" secondAttribute="leadingMargin" constant="8" id="cKR-to-qoW"/>
-                            <constraint firstItem="OO1-nV-Dcn" firstAttribute="top" secondItem="0nT-81-yWF" secondAttribute="bottom" constant="26" id="dtf-cI-lx9"/>
-                            <constraint firstItem="OO1-nV-Dcn" firstAttribute="leading" secondItem="0nT-81-yWF" secondAttribute="leading" id="wEG-JW-Qd1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0nT-81-yWF" secondAttribute="trailing" constant="8" id="xJw-iE-cfU"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="OO1-nV-Dcn" secondAttribute="trailing" constant="8" id="CON-jN-Vge"/>
+                            <constraint firstItem="0nT-81-yWF" firstAttribute="leading" secondItem="5Kf-Ha-gRr" secondAttribute="leadingMargin" constant="8" id="J9j-xw-yBc"/>
+                            <constraint firstItem="0nT-81-yWF" firstAttribute="top" secondItem="dgc-MJ-c1Q" secondAttribute="bottom" constant="36" id="MP5-i2-Mlg"/>
+                            <constraint firstItem="OO1-nV-Dcn" firstAttribute="leading" secondItem="0nT-81-yWF" secondAttribute="leading" id="PgC-U5-UMN"/>
+                            <constraint firstItem="OO1-nV-Dcn" firstAttribute="top" secondItem="0nT-81-yWF" secondAttribute="bottom" constant="34" id="VXT-4Z-8cO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0nT-81-yWF" secondAttribute="trailing" constant="8" id="w5x-1q-CcP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movie Detail" id="MKQ-UI-vKE">
@@ -97,6 +109,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="moviePoster" destination="0nT-81-yWF" id="Ejq-lk-v4N"/>
+                        <outlet property="movieTitle" destination="OO1-nV-Dcn" id="yp4-dF-2yP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5AD-V4-Qkq" userLabel="First Responder" sceneMemberID="firstResponder"/>

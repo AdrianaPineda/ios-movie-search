@@ -28,4 +28,12 @@
 
     return self;
 }
+
+- (NSData *)getPosterImageData {
+
+    NSString *posterUrlAsString = self.posterUrl;
+    NSURL *posterUrl = [NSURL URLWithString:posterUrlAsString];
+    NSData *imageData = [NSData dataWithContentsOfURL:posterUrl];
+    return imageData;
+}
 @end
