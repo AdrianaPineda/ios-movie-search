@@ -8,7 +8,7 @@
         <!--Movie Search-->
         <scene sceneID="NcK-o9-ldA">
             <objects>
-                <tableViewController id="496-De-vQQ" sceneMemberID="viewController">
+                <tableViewController id="496-De-vQQ" customClass="MoviesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nd5-eT-vU3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -15,6 +15,7 @@
 		010915291C95F17B00CC0821 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010915271C95F17B00CC0821 /* LaunchScreen.storyboard */; };
 		010915341C95F17B00CC0821 /* MovieSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 010915331C95F17B00CC0821 /* MovieSearchTests.m */; };
 		010915411C95F6E100CC0821 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 010915401C95F6E100CC0821 /* Movie.m */; };
+		010915441C95F71E00CC0821 /* MoviesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010915431C95F71E00CC0821 /* MoviesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		010915351C95F17B00CC0821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0109153F1C95F6E100CC0821 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = Models/Movie.h; sourceTree = "<group>"; };
 		010915401C95F6E100CC0821 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = Models/Movie.m; sourceTree = "<group>"; };
+		010915421C95F71E00CC0821 /* MoviesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesTableViewController.h; sourceTree = "<group>"; };
+		010915431C95F71E00CC0821 /* MoviesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				010915271C95F17B00CC0821 /* LaunchScreen.storyboard */,
 				0109152A1C95F17B00CC0821 /* Info.plist */,
 				010915191C95F17B00CC0821 /* Supporting Files */,
+				010915421C95F71E00CC0821 /* MoviesTableViewController.h */,
+				010915431C95F71E00CC0821 /* MoviesTableViewController.m */,
 			);
 			path = MovieSearch;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				0109151E1C95F17B00CC0821 /* AppDelegate.m in Sources */,
 				010915411C95F6E100CC0821 /* Movie.m in Sources */,
 				0109151B1C95F17B00CC0821 /* main.m in Sources */,
+				010915441C95F71E00CC0821 /* MoviesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
