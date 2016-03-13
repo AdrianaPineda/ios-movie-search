@@ -16,7 +16,8 @@
 		010915411C95F6E100CC0821 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 010915401C95F6E100CC0821 /* Movie.m */; };
 		010915441C95F71E00CC0821 /* MoviesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010915431C95F71E00CC0821 /* MoviesTableViewController.m */; };
 		010915471C95F9FE00CC0821 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010915461C95F9FE00CC0821 /* AFNetworking.framework */; };
-		010915481C95F9FE00CC0821 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 010915461C95F9FE00CC0821 /* AFNetworking.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		010915481C95F9FE00CC0821 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 010915461C95F9FE00CC0821 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0109154C1C96112500CC0821 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0109154B1C96112500CC0821 /* MovieDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		010915421C95F71E00CC0821 /* MoviesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesTableViewController.h; sourceTree = "<group>"; };
 		010915431C95F71E00CC0821 /* MoviesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesTableViewController.m; sourceTree = "<group>"; };
 		010915461C95F9FE00CC0821 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = MovieSearch/libs/AFNetworking.framework; sourceTree = "<group>"; };
+		0109154A1C96112500CC0821 /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
+		0109154B1C96112500CC0821 /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				010915271C95F17B00CC0821 /* LaunchScreen.storyboard */,
 				0109152A1C95F17B00CC0821 /* Info.plist */,
 				010915191C95F17B00CC0821 /* Supporting Files */,
+				0109154A1C96112500CC0821 /* MovieDetailViewController.h */,
+				0109154B1C96112500CC0821 /* MovieDetailViewController.m */,
 			);
 			path = MovieSearch;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 			files = (
 				0109151E1C95F17B00CC0821 /* AppDelegate.m in Sources */,
 				010915411C95F6E100CC0821 /* Movie.m in Sources */,
+				0109154C1C96112500CC0821 /* MovieDetailViewController.m in Sources */,
 				0109151B1C95F17B00CC0821 /* main.m in Sources */,
 				010915441C95F71E00CC0821 /* MoviesTableViewController.m in Sources */,
 			);

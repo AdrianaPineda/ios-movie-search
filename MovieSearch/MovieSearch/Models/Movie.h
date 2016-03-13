@@ -10,4 +10,10 @@
 
 @interface Movie : NSObject
 
+@property (nonatomic) NSInteger year;
+@property (nonatomic) NSString *title;
+@property (nonatomic) NSString *posterUrl;
+@property (nonatomic) NSString *imdbID;
+
+- (instancetype) initWithDictionary:(NSDictionary *)dictionary;
 @end

@@ -7,21 +7,23 @@
 //
 
 #import "MoviesTableViewController.h"
+#import "Movie.h"
+#import "MovieDetailViewController.h"
+#import <AFNetworking/AFNetworking.h>
+
+#define MOVIES_RESULT_KEY @"Search"
 
 @interface MoviesTableViewController ()
 
+@property (nonatomic, strong) NSArray *movies;
 @end
 
 @implementation MoviesTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    [self downloadMovies];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,27 +31,78 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Download movies
+- (void)downloadMovies {
+
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *sessionManager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+
+    NSURL *url = [NSURL URLWithString:@"https://www.omdbapi.com?s=harry"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+
+    NSURLSessionDataTask *dataTask = [sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id  responseObject, NSError * error) {
+
+        if (error) {
+            NSLog(@"ERROR");
+        } else {
+
+            NSMutableArray *movies = [[NSMutableArray alloc] init];
+            NSDictionary *moviesDictionary = [responseObject objectForKey:MOVIES_RESULT_KEY];
+            for (NSDictionary *movieDic in moviesDictionary) {
+                Movie *currentMovie = [[Movie alloc] initWithDictionary:movieDic];
+                [movies addObject:currentMovie];
+            }
+
+            self.movies = movies;
+
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+
+        }
+    }];
+    [dataTask resume];
+}
+
+- (NSUInteger)numberOfMovies {
+    return self.movies.count;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    NSUInteger numberOfMovies = [self numberOfMovies];
+    if (numberOfMovies > 0) {
+        return numberOfMovies;
+    }
+
+    return 1;
+
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"movie" forIndexPath:indexPath];
+
+    if ([self numberOfMovies] > 0) {
+        Movie *currentMovie = [self.movies objectAtIndex:indexPath.row];
+        if (currentMovie) {
+            cell.textLabel.text = currentMovie.title;
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%li", currentMovie.year];
+        }
+    } else {
+        cell.textLabel.text = @"No movies found";
+    }
+
+
     // Configure the cell...
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -85,14 +138,25 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"showMovie"]) {
+
+        NSIndexPath *selectedRowIndexPath = [self.tableView indexPathForSelectedRow];
+        Movie *selectedMovie = [self.movies objectAtIndex:selectedRowIndexPath.row];
+
+        if (selectedMovie) {
+            MovieDetailViewController *nextViewController = [segue destinationViewController];
+            [nextViewController setSelectedMovie:selectedMovie];
+        }
+    }
+
 }
-*/
+
 
 @end
