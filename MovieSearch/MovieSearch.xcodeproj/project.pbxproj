@@ -81,6 +81,7 @@
 		010915181C95F17B00CC0821 /* MovieSearch */ = {
 			isa = PBXGroup;
 			children = (
+				0109153E1C95F37A00CC0821 /* Models */,
 				0109151C1C95F17B00CC0821 /* AppDelegate.h */,
 				0109151D1C95F17B00CC0821 /* AppDelegate.m */,
 				0109151F1C95F17B00CC0821 /* ViewController.h */,
@@ -109,6 +110,13 @@
 				010915351C95F17B00CC0821 /* Info.plist */,
 			);
 			path = MovieSearchTests;
+			sourceTree = "<group>";
+		};
+		0109153E1C95F37A00CC0821 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
