@@ -55,6 +55,38 @@
             </objects>
             <point key="canvasLocation" x="888" y="1006"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="aF3-GG-rtr">
+            <objects>
+                <viewController id="Wvn-dP-Xeu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nq6-KC-uQ2"/>
+                        <viewControllerLayoutGuide type="bottom" id="nk3-1R-IVj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vu4-mf-A5S">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YO8-av-G5v">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="496-De-vQQ" kind="show" id="M3U-Nk-Irj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YO8-av-G5v" firstAttribute="centerX" secondItem="Vu4-mf-A5S" secondAttribute="centerX" id="XJx-yT-LxS"/>
+                            <constraint firstItem="YO8-av-G5v" firstAttribute="centerY" secondItem="Vu4-mf-A5S" secondAttribute="centerY" id="mZW-32-wCK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vTD-AA-EHx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0K-wM-KPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="1006"/>
+        </scene>
         <!--Movie Detail-->
         <scene sceneID="SR0-m4-Y4R">
             <objects>
@@ -127,12 +159,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="496-De-vQQ" kind="relationship" relationship="rootViewController" id="wzf-Ft-gvo"/>
+                        <segue destination="Wvn-dP-Xeu" kind="relationship" relationship="rootViewController" id="4ai-tT-EgT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bL0-gt-sFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="145" y="1006"/>
+            <point key="canvasLocation" x="-531" y="1006"/>
         </scene>
     </scenes>
 </document>
