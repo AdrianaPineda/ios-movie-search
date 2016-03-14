@@ -12,6 +12,8 @@
 #import <AFNetworking/AFNetworking.h>
 
 #define MOVIES_RESULT_KEY @"Search"
+#define OMDB_URL @"https://www.omdbapi.com?s=%@"
+#define DEFAULT_SEARCH_TITLE @"harry"
 
 @interface MoviesTableViewController ()
 
@@ -37,7 +39,8 @@
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *sessionManager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
 
-    NSURL *url = [NSURL URLWithString:@"https://www.omdbapi.com?s=harry"];
+    NSString *urlAsString = [NSString stringWithFormat:OMDB_URL, [self getTitleForSearch]];
+    NSURL *url = [NSURL URLWithString:urlAsString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
     NSURLSessionDataTask *dataTask = [sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id  responseObject, NSError * error) {
@@ -62,6 +65,14 @@
         }
     }];
     [dataTask resume];
+}
+
+- (NSString *)getTitleForSearch {
+    if (self.movieTitleSearch.length > 0) {
+        return self.movieTitleSearch;
+    } else {
+        return DEFAULT_SEARCH_TITLE;
+    }
 }
 
 - (NSUInteger)numberOfMovies {

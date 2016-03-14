@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MoviesTableViewController : UITableViewController
-
+@property (nonatomic) NSString *movieTitleSearch;
 @end
