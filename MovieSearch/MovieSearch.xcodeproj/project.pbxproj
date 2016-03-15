@@ -23,6 +23,7 @@
 		013072521C97AA8B0048383E /* MovieSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 013072511C97AA8B0048383E /* MovieSearcher.m */; };
 		013072541C97AEED0048383E /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013072531C97AEED0048383E /* OCMock.framework */; };
 		013072561C97AFB00048383E /* MovieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 013072551C97AFB00048383E /* MovieTests.m */; };
+		013072591C97B2A80048383E /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 013072531C97AEED0048383E /* OCMock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,16 @@
 				010915481C95F9FE00CC0821 /* AFNetworking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		013072581C97B29F0048383E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				013072591C97B2A80048383E /* OCMock.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -205,6 +216,7 @@
 				0109152B1C95F17B00CC0821 /* Sources */,
 				0109152C1C95F17B00CC0821 /* Frameworks */,
 				0109152D1C95F17B00CC0821 /* Resources */,
+				013072581C97B29F0048383E /* CopyFiles */,
 			);
 			buildRules = (
 			);
