@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="888" y="1006"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie Search View Controller-->
         <scene sceneID="aF3-GG-rtr">
             <objects>
-                <viewController id="Wvn-dP-Xeu" sceneMemberID="viewController">
+                <viewController id="Wvn-dP-Xeu" customClass="MovieSearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nq6-KC-uQ2"/>
                         <viewControllerLayoutGuide type="bottom" id="nk3-1R-IVj"/>
@@ -68,20 +68,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YO8-av-G5v">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="251" y="285" width="98" height="30"/>
+                                <state key="normal" title="Search movie!"/>
                                 <connections>
-                                    <segue destination="496-De-vQQ" kind="show" id="M3U-Nk-Irj"/>
+                                    <action selector="searchMovie:" destination="Wvn-dP-Xeu" eventType="touchUpInside" id="2WN-AT-KWl"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BLd-7v-VlA">
+                                <rect key="frame" x="240" y="235" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="cba-gV-KSL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BLd-7v-VlA" firstAttribute="centerX" secondItem="Vu4-mf-A5S" secondAttribute="centerX" id="Kpa-Dz-Xjm"/>
                             <constraint firstItem="YO8-av-G5v" firstAttribute="centerX" secondItem="Vu4-mf-A5S" secondAttribute="centerX" id="XJx-yT-LxS"/>
+                            <constraint firstItem="YO8-av-G5v" firstAttribute="top" secondItem="BLd-7v-VlA" secondAttribute="bottom" constant="20" id="ZdM-RB-grN"/>
                             <constraint firstItem="YO8-av-G5v" firstAttribute="centerY" secondItem="Vu4-mf-A5S" secondAttribute="centerY" id="mZW-32-wCK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vTD-AA-EHx"/>
+                    <connections>
+                        <outlet property="movieTitleTextField" destination="BLd-7v-VlA" id="lqh-nn-GUA"/>
+                        <segue destination="496-De-vQQ" kind="show" identifier="moviesList" id="Oao-vB-GLb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z0K-wM-KPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

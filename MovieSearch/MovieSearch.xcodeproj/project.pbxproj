@@ -19,6 +19,7 @@
 		010915481C95F9FE00CC0821 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 010915461C95F9FE00CC0821 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0109154C1C96112500CC0821 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0109154B1C96112500CC0821 /* MovieDetailViewController.m */; };
 		0109154E1C96221300CC0821 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0109154D1C96221300CC0821 /* Social.framework */; };
+		0130724F1C97A6500048383E /* MovieSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0130724E1C97A6500048383E /* MovieSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		0109154A1C96112500CC0821 /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
 		0109154B1C96112500CC0821 /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
 		0109154D1C96221300CC0821 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		0130724D1C97A6500048383E /* MovieSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieSearchViewController.h; sourceTree = "<group>"; };
+		0130724E1C97A6500048383E /* MovieSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				0109153E1C95F37A00CC0821 /* Models */,
 				0109151C1C95F17B00CC0821 /* AppDelegate.h */,
 				0109151D1C95F17B00CC0821 /* AppDelegate.m */,
+				0130724D1C97A6500048383E /* MovieSearchViewController.h */,
+				0130724E1C97A6500048383E /* MovieSearchViewController.m */,
 				010915421C95F71E00CC0821 /* MoviesTableViewController.h */,
 				010915431C95F71E00CC0821 /* MoviesTableViewController.m */,
 				0109154A1C96112500CC0821 /* MovieDetailViewController.h */,
@@ -262,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0109151E1C95F17B00CC0821 /* AppDelegate.m in Sources */,
+				0130724F1C97A6500048383E /* MovieSearchViewController.m in Sources */,
 				010915411C95F6E100CC0821 /* Movie.m in Sources */,
 				0109154C1C96112500CC0821 /* MovieDetailViewController.m in Sources */,
 				0109151B1C95F17B00CC0821 /* main.m in Sources */,
