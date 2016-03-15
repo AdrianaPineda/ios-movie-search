@@ -6,7 +6,7 @@
 //  Copyright © 2016 Adriana Pineda. All rights reserved.
 //
 
-#import "MovieSearch.h"
+#import "MovieSearcher.h"
 #import "Movie.h"
 #import <AFNetworking/AFNetworking.h>
 
@@ -14,7 +14,7 @@
 #define OMDB_URL @"https://www.omdbapi.com?s=%@"
 #define DEFAULT_SEARCH_TITLE @"harry"
 
-@implementation MovieSearch
+@implementation MovieSearcher
 
 + (void)searchMoviesWithTitle:(NSString *)title completionHandler:(void (^)(NSArray *movies))completionHandler {
 

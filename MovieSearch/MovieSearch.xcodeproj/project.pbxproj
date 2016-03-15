@@ -20,7 +20,7 @@
 		0109154C1C96112500CC0821 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0109154B1C96112500CC0821 /* MovieDetailViewController.m */; };
 		0109154E1C96221300CC0821 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0109154D1C96221300CC0821 /* Social.framework */; };
 		0130724F1C97A6500048383E /* MovieSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0130724E1C97A6500048383E /* MovieSearchViewController.m */; };
-		013072521C97AA8B0048383E /* MovieSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 013072511C97AA8B0048383E /* MovieSearch.m */; };
+		013072521C97AA8B0048383E /* MovieSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 013072511C97AA8B0048383E /* MovieSearcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +69,8 @@
 		0109154D1C96221300CC0821 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		0130724D1C97A6500048383E /* MovieSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieSearchViewController.h; sourceTree = "<group>"; };
 		0130724E1C97A6500048383E /* MovieSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearchViewController.m; sourceTree = "<group>"; };
-		013072501C97AA8B0048383E /* MovieSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieSearch.h; path = Models/MovieSearch.h; sourceTree = "<group>"; };
-		013072511C97AA8B0048383E /* MovieSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieSearch.m; path = Models/MovieSearch.m; sourceTree = "<group>"; };
+		013072501C97AA8B0048383E /* MovieSearcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieSearcher.h; path = Models/MovieSearcher.h; sourceTree = "<group>"; };
+		013072511C97AA8B0048383E /* MovieSearcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieSearcher.m; path = Models/MovieSearcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +157,8 @@
 			children = (
 				0109153F1C95F6E100CC0821 /* Movie.h */,
 				010915401C95F6E100CC0821 /* Movie.m */,
-				013072501C97AA8B0048383E /* MovieSearch.h */,
-				013072511C97AA8B0048383E /* MovieSearch.m */,
+				013072501C97AA8B0048383E /* MovieSearcher.h */,
+				013072511C97AA8B0048383E /* MovieSearcher.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				013072521C97AA8B0048383E /* MovieSearch.m in Sources */,
+				013072521C97AA8B0048383E /* MovieSearcher.m in Sources */,
 				0109151E1C95F17B00CC0821 /* AppDelegate.m in Sources */,
 				0130724F1C97A6500048383E /* MovieSearchViewController.m in Sources */,
 				010915411C95F6E100CC0821 /* Movie.m in Sources */,

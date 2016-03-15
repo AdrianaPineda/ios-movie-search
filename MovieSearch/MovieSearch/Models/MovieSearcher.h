@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MovieSearch : NSObject
+@interface MovieSearcher : NSObject
 
 + (void)searchMoviesWithTitle:(NSString *)title completionHandler:(void (^)(NSArray *movies))completionHandler;
 @end

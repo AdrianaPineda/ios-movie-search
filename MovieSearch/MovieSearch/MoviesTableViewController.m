@@ -9,7 +9,7 @@
 #import "MoviesTableViewController.h"
 #import "Movie.h"
 #import "MovieDetailViewController.h"
-#import "MovieSearch.h"
+#import "MovieSearcher.h"
 
 #define DEFAULT_SEARCH_TITLE @"harry"
 
@@ -34,7 +34,7 @@
 #pragma mark - Download movies
 - (void)downloadMovies {
 
-    [MovieSearch searchMoviesWithTitle:self.movieTitleSearch completionHandler:^(NSArray *movies) {
+    [MovieSearcher searchMoviesWithTitle:self.movieTitleSearch completionHandler:^(NSArray *movies) {
 
         if ([movies count] > 0) {
             self.movies = movies;
