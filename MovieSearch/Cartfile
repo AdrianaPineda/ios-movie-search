@@ -1,1 +1,2 @@
-github "AFNetworking/AFNetworking" ~> 3.0
+github "AFNetworking/AFNetworking" == 3.0
+github "erikdoe/ocmock" == 3.2.2
