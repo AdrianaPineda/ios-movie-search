@@ -9,10 +9,8 @@
 #import "MoviesTableViewController.h"
 #import "Movie.h"
 #import "MovieDetailViewController.h"
-#import <AFNetworking/AFNetworking.h>
+#import "MovieSearch.h"
 
-#define MOVIES_RESULT_KEY @"Search"
-#define OMDB_URL @"https://www.omdbapi.com?s=%@"
 #define DEFAULT_SEARCH_TITLE @"harry"
 
 @interface MoviesTableViewController ()
@@ -36,43 +34,17 @@
 #pragma mark - Download movies
 - (void)downloadMovies {
 
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    AFURLSessionManager *sessionManager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    [MovieSearch searchMoviesWithTitle:self.movieTitleSearch completionHandler:^(NSArray *movies) {
 
-    NSString *urlAsString = [NSString stringWithFormat:OMDB_URL, [self getTitleForSearch]];
-    NSURL *url = [NSURL URLWithString:urlAsString];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-
-    NSURLSessionDataTask *dataTask = [sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id  responseObject, NSError * error) {
-
-        if (error) {
-            NSLog(@"ERROR");
-        } else {
-
-            NSMutableArray *movies = [[NSMutableArray alloc] init];
-            NSDictionary *moviesDictionary = [responseObject objectForKey:MOVIES_RESULT_KEY];
-            for (NSDictionary *movieDic in moviesDictionary) {
-                Movie *currentMovie = [[Movie alloc] initWithDictionary:movieDic];
-                [movies addObject:currentMovie];
-            }
-
+        if ([movies count] > 0) {
             self.movies = movies;
 
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
             });
-
         }
-    }];
-    [dataTask resume];
-}
 
-- (NSString *)getTitleForSearch {
-    if (self.movieTitleSearch.length > 0) {
-        return self.movieTitleSearch;
-    } else {
-        return DEFAULT_SEARCH_TITLE;
-    }
+    }];
 }
 
 - (NSUInteger)numberOfMovies {
