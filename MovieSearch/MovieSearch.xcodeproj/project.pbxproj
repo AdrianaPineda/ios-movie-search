@@ -21,6 +21,8 @@
 		0109154E1C96221300CC0821 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0109154D1C96221300CC0821 /* Social.framework */; };
 		0130724F1C97A6500048383E /* MovieSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0130724E1C97A6500048383E /* MovieSearchViewController.m */; };
 		013072521C97AA8B0048383E /* MovieSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 013072511C97AA8B0048383E /* MovieSearcher.m */; };
+		013072541C97AEED0048383E /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013072531C97AEED0048383E /* OCMock.framework */; };
+		013072561C97AFB00048383E /* MovieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 013072551C97AFB00048383E /* MovieTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		0130724E1C97A6500048383E /* MovieSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearchViewController.m; sourceTree = "<group>"; };
 		013072501C97AA8B0048383E /* MovieSearcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieSearcher.h; path = Models/MovieSearcher.h; sourceTree = "<group>"; };
 		013072511C97AA8B0048383E /* MovieSearcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieSearcher.m; path = Models/MovieSearcher.m; sourceTree = "<group>"; };
+		013072531C97AEED0048383E /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = MovieSearchTests/libs/OCMock.framework; sourceTree = "<group>"; };
+		013072551C97AFB00048383E /* MovieTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				013072541C97AEED0048383E /* OCMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +101,7 @@
 		0109150D1C95F17B00CC0821 = {
 			isa = PBXGroup;
 			children = (
+				013072531C97AEED0048383E /* OCMock.framework */,
 				0109154D1C96221300CC0821 /* Social.framework */,
 				010915461C95F9FE00CC0821 /* AFNetworking.framework */,
 				010915181C95F17B00CC0821 /* MovieSearch */,
@@ -148,6 +154,7 @@
 			children = (
 				010915331C95F17B00CC0821 /* MovieSearchTests.m */,
 				010915351C95F17B00CC0821 /* Info.plist */,
+				013072551C97AFB00048383E /* MovieTests.m */,
 			);
 			path = MovieSearchTests;
 			sourceTree = "<group>";
@@ -285,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				013072561C97AFB00048383E /* MovieTests.m in Sources */,
 				010915341C95F17B00CC0821 /* MovieSearchTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +443,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MovieSearchTests/libs",
+				);
 				INFOPLIST_FILE = MovieSearchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pineda.adriana.MovieSearchTests;
@@ -447,6 +459,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MovieSearchTests/libs",
+				);
 				INFOPLIST_FILE = MovieSearchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pineda.adriana.MovieSearchTests;
