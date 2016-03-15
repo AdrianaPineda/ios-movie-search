@@ -24,6 +24,9 @@
 		013072541C97AEED0048383E /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013072531C97AEED0048383E /* OCMock.framework */; };
 		013072561C97AFB00048383E /* MovieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 013072551C97AFB00048383E /* MovieTests.m */; };
 		013072591C97B2A80048383E /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 013072531C97AEED0048383E /* OCMock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0130725B1C97B6C40048383E /* MovieSearcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0130725A1C97B6C40048383E /* MovieSearcherTests.m */; };
+		0130725C1C97B9BD0048383E /* AFNetworking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 010915461C95F9FE00CC0821 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0130725D1C97BA000048383E /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010915461C95F9FE00CC0821 /* AFNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0130725C1C97B9BD0048383E /* AFNetworking.framework in CopyFiles */,
 				013072591C97B2A80048383E /* OCMock.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +90,7 @@
 		013072511C97AA8B0048383E /* MovieSearcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieSearcher.m; path = Models/MovieSearcher.m; sourceTree = "<group>"; };
 		013072531C97AEED0048383E /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = MovieSearchTests/libs/OCMock.framework; sourceTree = "<group>"; };
 		013072551C97AFB00048383E /* MovieTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTests.m; sourceTree = "<group>"; };
+		0130725A1C97B6C40048383E /* MovieSearcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearcherTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0130725D1C97BA000048383E /* AFNetworking.framework in Frameworks */,
 				013072541C97AEED0048383E /* OCMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +172,7 @@
 				010915331C95F17B00CC0821 /* MovieSearchTests.m */,
 				010915351C95F17B00CC0821 /* Info.plist */,
 				013072551C97AFB00048383E /* MovieTests.m */,
+				0130725A1C97B6C40048383E /* MovieSearcherTests.m */,
 			);
 			path = MovieSearchTests;
 			sourceTree = "<group>";
@@ -305,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				013072561C97AFB00048383E /* MovieTests.m in Sources */,
+				0130725B1C97B6C40048383E /* MovieSearcherTests.m in Sources */,
 				010915341C95F17B00CC0821 /* MovieSearchTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +466,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MovieSearchTests/libs",
+					"$(PROJECT_DIR)/MovieSearch/libs",
 				);
 				INFOPLIST_FILE = MovieSearchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -474,6 +483,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MovieSearchTests/libs",
+					"$(PROJECT_DIR)/MovieSearch/libs",
 				);
 				INFOPLIST_FILE = MovieSearchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
