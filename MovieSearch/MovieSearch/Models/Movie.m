@@ -11,7 +11,7 @@
 #define YEAR_KEY @"Year"
 #define TITLE_KEY @"Title"
 #define POSTER_URL_KEY @"Poster"
-#define IMDB_ID_KEY @"Poster"
+#define IMDB_ID_KEY @"imdbId"
 
 @implementation Movie
 
