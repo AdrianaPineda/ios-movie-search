@@ -518,6 +518,7 @@
 				0109153A1C95F17B00CC0821 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0109153B1C95F17B00CC0821 /* Build configuration list for PBXNativeTarget "MovieSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +527,7 @@
 				0109153D1C95F17B00CC0821 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
