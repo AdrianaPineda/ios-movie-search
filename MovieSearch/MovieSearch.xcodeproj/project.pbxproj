@@ -27,6 +27,7 @@
 		0130725B1C97B6C40048383E /* MovieSearcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0130725A1C97B6C40048383E /* MovieSearcherTests.m */; };
 		0130725C1C97B9BD0048383E /* AFNetworking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 010915461C95F9FE00CC0821 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0130725D1C97BA000048383E /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010915461C95F9FE00CC0821 /* AFNetworking.framework */; };
+		01F318A61C98E31B003BA657 /* SMSSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F318A51C98E31B003BA657 /* SMSSender.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,8 @@
 		013072531C97AEED0048383E /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = MovieSearchTests/libs/OCMock.framework; sourceTree = "<group>"; };
 		013072551C97AFB00048383E /* MovieTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTests.m; sourceTree = "<group>"; };
 		0130725A1C97B6C40048383E /* MovieSearcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearcherTests.m; sourceTree = "<group>"; };
+		01F318A41C98E31B003BA657 /* SMSSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMSSender.h; path = Models/SMSSender.h; sourceTree = "<group>"; };
+		01F318A51C98E31B003BA657 /* SMSSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMSSender.m; path = Models/SMSSender.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +187,8 @@
 				010915401C95F6E100CC0821 /* Movie.m */,
 				013072501C97AA8B0048383E /* MovieSearcher.h */,
 				013072511C97AA8B0048383E /* MovieSearcher.m */,
+				01F318A41C98E31B003BA657 /* SMSSender.h */,
+				01F318A51C98E31B003BA657 /* SMSSender.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 			files = (
 				013072521C97AA8B0048383E /* MovieSearcher.m in Sources */,
 				0109151E1C95F17B00CC0821 /* AppDelegate.m in Sources */,
+				01F318A61C98E31B003BA657 /* SMSSender.m in Sources */,
 				0130724F1C97A6500048383E /* MovieSearchViewController.m in Sources */,
 				010915411C95F6E100CC0821 /* Movie.m in Sources */,
 				0109154C1C96112500CC0821 /* MovieDetailViewController.m in Sources */,
