@@ -14,6 +14,7 @@
 @interface MovieDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *movieTitle;
+@property (weak, nonatomic) IBOutlet UILabel *movieYear;
 @property (nonatomic, strong) Movie *movie;
 @end
 
@@ -38,6 +39,7 @@
 
     [self configureMoviePoster];
     [self configureMovieTitle];
+    [self configureMovieYear];
 }
 
 - (void)configureMoviePoster {
@@ -55,6 +57,14 @@
 
     if (self.movie) {
         self.movieTitle.text = self.movie.title;
+    }
+
+}
+
+- (void)configureMovieYear {
+
+    if (self.movie) {
+        self.movieYear.text = [NSString stringWithFormat:@"%d", self.movie.year];
     }
 
 }

@@ -150,14 +150,22 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kN-Qf-epx">
+                                <rect key="frame" x="28" y="401" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1058823529" green="0.65490196079999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0kN-Qf-epx" firstAttribute="top" secondItem="OO1-nV-Dcn" secondAttribute="bottom" constant="16" id="23J-UT-uGQ"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="OO1-nV-Dcn" secondAttribute="trailing" constant="8" id="CON-jN-Vge"/>
                             <constraint firstItem="0nT-81-yWF" firstAttribute="leading" secondItem="5Kf-Ha-gRr" secondAttribute="leadingMargin" constant="8" id="J9j-xw-yBc"/>
                             <constraint firstItem="0nT-81-yWF" firstAttribute="top" secondItem="dgc-MJ-c1Q" secondAttribute="bottom" constant="36" id="MP5-i2-Mlg"/>
                             <constraint firstItem="OO1-nV-Dcn" firstAttribute="leading" secondItem="0nT-81-yWF" secondAttribute="leading" id="PgC-U5-UMN"/>
                             <constraint firstItem="OO1-nV-Dcn" firstAttribute="top" secondItem="0nT-81-yWF" secondAttribute="bottom" constant="34" id="VXT-4Z-8cO"/>
+                            <constraint firstItem="0kN-Qf-epx" firstAttribute="leading" secondItem="OO1-nV-Dcn" secondAttribute="leading" id="s6v-wn-TsI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0nT-81-yWF" secondAttribute="trailing" constant="8" id="w5x-1q-CcP"/>
                         </constraints>
                     </view>
@@ -175,6 +183,7 @@
                     <connections>
                         <outlet property="moviePoster" destination="0nT-81-yWF" id="Ejq-lk-v4N"/>
                         <outlet property="movieTitle" destination="OO1-nV-Dcn" id="yp4-dF-2yP"/>
+                        <outlet property="movieYear" destination="0kN-Qf-epx" id="Dax-6B-l7T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5AD-V4-Qkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
