@@ -33,6 +33,7 @@
 
         if (error) {
             NSLog(@"ERROR");
+            completionHandler(nil);
         } else {
 
             NSMutableArray *movies = [[NSMutableArray alloc] init];

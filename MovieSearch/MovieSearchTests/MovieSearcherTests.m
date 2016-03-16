@@ -39,7 +39,8 @@
     }];
 }
 
-- (void)testSearchMovies {
+- (void)testSearchMovies_1 {
+
     NSString *searchTitle = @"harry";
 
     XCTestExpectation *completionExpectation = [self expectationWithDescription:@"Long method"];
@@ -52,5 +53,21 @@
 
     [self waitForExpectationsWithTimeout:5.0 handler:nil];
 
+}
+
+- (void)testSearchMovies_2 {
+
+    NSString *searchTitle = @"%$";
+
+    XCTestExpectation *completionExpectation = [self expectationWithDescription:@"Long method"];
+    [MovieSearcher searchMoviesWithTitle:searchTitle completionHandler:^(NSArray *movies) {
+
+        XCTAssertNil(movies);
+        [completionExpectation fulfill];
+
+    }];
+
+    [self waitForExpectationsWithTimeout:5.0 handler:nil];
+    
 }
 @end
