@@ -23,6 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.tableView.tableFooterView = [UIView new];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
     [self downloadMovies];
 }
 

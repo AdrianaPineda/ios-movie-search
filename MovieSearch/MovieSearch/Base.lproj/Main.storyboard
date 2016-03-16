@@ -13,7 +13,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nd5-eT-vU3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movie" textLabel="PoB-vv-FCv" detailTextLabel="OIO-ow-Vff" style="IBUITableViewCellStyleSubtitle" id="aSx-2G-Zhu">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
@@ -26,18 +26,19 @@
                                             <rect key="frame" x="15" y="5" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OIO-ow-Vff">
                                             <rect key="frame" x="15" y="25" width="41" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.1058823529" green="0.65490196079999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="C1t-q4-QWq" kind="show" identifier="showMovie" id="xC9-Px-rSx"/>
                                 </connections>
@@ -49,7 +50,11 @@
                             <outlet property="delegate" destination="496-De-vQQ" id="LGp-GY-hT3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Movie Search" id="3gF-yz-Qca"/>
+                    <navigationItem key="navigationItem" title="Movie Search" id="3gF-yz-Qca">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="rty-IQ-llC">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rku-EN-S9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,23 +73,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YO8-av-G5v">
-                                <rect key="frame" x="251" y="285" width="98" height="30"/>
-                                <state key="normal" title="Search movie!"/>
+                                <rect key="frame" x="185" y="285" width="230" height="30"/>
+                                <color key="backgroundColor" red="0.1058823529" green="0.65490196079999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="searchMovie:" destination="Wvn-dP-Xeu" eventType="touchUpInside" id="2WN-AT-KWl"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BLd-7v-VlA">
-                                <rect key="frame" x="240" y="235" width="120" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start typing to discover movies..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BLd-7v-VlA">
+                                <rect key="frame" x="185" y="235" width="230" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="cba-gV-KSL"/>
+                                    <constraint firstAttribute="width" constant="230" id="cba-gV-KSL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="YO8-av-G5v" firstAttribute="width" secondItem="BLd-7v-VlA" secondAttribute="width" id="3mQ-OR-0zL"/>
                             <constraint firstItem="BLd-7v-VlA" firstAttribute="centerX" secondItem="Vu4-mf-A5S" secondAttribute="centerX" id="Kpa-Dz-Xjm"/>
                             <constraint firstItem="YO8-av-G5v" firstAttribute="centerX" secondItem="Vu4-mf-A5S" secondAttribute="centerX" id="XJx-yT-LxS"/>
                             <constraint firstItem="YO8-av-G5v" firstAttribute="top" secondItem="BLd-7v-VlA" secondAttribute="bottom" constant="20" id="ZdM-RB-grN"/>
@@ -94,6 +108,7 @@
                     <navigationItem key="navigationItem" id="vTD-AA-EHx"/>
                     <connections>
                         <outlet property="movieTitleTextField" destination="BLd-7v-VlA" id="lqh-nn-GUA"/>
+                        <outlet property="search" destination="YO8-av-G5v" id="3iD-pm-cyI"/>
                         <segue destination="496-De-vQQ" kind="show" identifier="moviesList" id="Oao-vB-GLb"/>
                     </connections>
                 </viewController>
@@ -132,11 +147,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OO1-nV-Dcn">
                                 <rect key="frame" x="28" y="364" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="OO1-nV-Dcn" secondAttribute="trailing" constant="8" id="CON-jN-Vge"/>
                             <constraint firstItem="0nT-81-yWF" firstAttribute="leading" secondItem="5Kf-Ha-gRr" secondAttribute="leadingMargin" constant="8" id="J9j-xw-yBc"/>
@@ -147,7 +162,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movie Detail" id="MKQ-UI-vKE">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Ir4-i5-Pt5">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Share" id="859-Wa-9Lw">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="share:" destination="C1t-q4-QWq" id="zDH-3Y-ayW"/>
                             </connections>
@@ -165,18 +184,22 @@
         <!--Navigation Controller-->
         <scene sceneID="tgT-ED-lmV">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bL0-gt-sFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6f3-OW-lBV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Sd-af-OQl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1058823529" green="0.65490196079999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="Wvn-dP-Xeu" kind="relationship" relationship="rootViewController" id="4ai-tT-EgT"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bL0-gt-sFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-531" y="1006"/>
         </scene>

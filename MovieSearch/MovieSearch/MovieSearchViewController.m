@@ -13,6 +13,7 @@
 
 @interface MovieSearchViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *movieTitleTextField;
+@property (weak, nonatomic) IBOutlet UIButton *search;
 
 @end
 
