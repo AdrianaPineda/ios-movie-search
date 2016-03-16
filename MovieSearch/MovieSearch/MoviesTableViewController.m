@@ -75,7 +75,7 @@
         Movie *currentMovie = [self.movies objectAtIndex:indexPath.row];
         if (currentMovie) {
             cell.textLabel.text = currentMovie.title;
-            cell.detailTextLabel.text = [NSString stringWithFormat:@"%li", currentMovie.year];
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%li", (long)currentMovie.year];
         }
     } else {
         cell.textLabel.text = @"No movies found";
